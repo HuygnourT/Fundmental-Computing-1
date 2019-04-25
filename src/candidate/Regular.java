@@ -25,18 +25,18 @@ public class Regular extends Employee {
 	}
 	public void setRate()
 	{
-		this.rate = (this.getYearOfExperience() < 25 ) ? this.getYearOfExperience() / 3 *0.33 : 8*0.33 + 2.33;
+		this.rate = (this.getYearOfExperience() < 25 ) ? ( this.getYearOfExperience() / 3 * 0.33 + 2.33 ): ( 8*0.33 + 2.33 );
 	}
 	public void setRate2()
 	{
-		this.rate = 2.33;
-		for(int i = 3 ; i < this.getYearOfExperience() ; i+=3)
+		if(this.getYearOfExperience() > 25)
+			this.rate = 2.33 + 8*0.33;
+		else
 		{
-			this.rate+=0.33;	
-			if(this.getYearOfExperience() > 25)
-				break;
+			this.rate = 2.33;
+			for(int i = 3 ; i < this.getYearOfExperience() ; i+=3)
+				this.rate+=0.33;	
 		}
-		
 	}
 	public double getRate()
 	{
