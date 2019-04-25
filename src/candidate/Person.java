@@ -3,8 +3,8 @@ import java.util.*;
 public class Person{
 	protected String fullName,phoneNumber;
 	protected boolean gender;
-	public Address add = new Address();
-	public Date date = new Date();
+	protected Address add = new Address();
+	protected Date date = new Date();
 	public void setAddress(Address add)
 	{
 		this.add = add;
