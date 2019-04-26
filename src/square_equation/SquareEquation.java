@@ -23,6 +23,7 @@ public class SquareEquation extends LinerEquation
 	{
 		return a;
 	}
+	@Override
 	public void input()
 	{
 		Scanner in = new Scanner(System.in);
@@ -30,6 +31,7 @@ public class SquareEquation extends LinerEquation
 		setA(in.nextDouble());
 		super.input();
 	}
+	@Override
 	public void solve()
 	{
 		if(a==0)
@@ -47,6 +49,20 @@ public class SquareEquation extends LinerEquation
 			} else System.out.println("No root");		
 				
 		}
+	}
+	
+	@Override
+	public void f(int a,int b)
+	{
+		System.out.println((a-b));
+	}
+	public void f(int a,int b,int c)
+	{
+		System.out.println((a-b-c));
+	}
+	public void f2(int a,int b)
+	{
+		System.out.println((a+b));
 	}
 	public static void main(String[] args)
 	{

@@ -38,6 +38,18 @@ public class LinerEquation
 		System.out.println("Enter c : ");
 		setC(in.nextDouble());
 	}
+	public void f(int a,int b)
+	{
+		System.out.println((a+b));
+	}
+	public void f(int a,int b,int c)
+	{
+		System.out.println((a+b+c));
+	}
+	public void f1(int a,int b)
+	{
+		System.out.println((a*b));
+	}
 	public static void main(String[] args) 
 	{	
 		//New Object LineEquatation with attribute and method rieng biet
