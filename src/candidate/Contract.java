@@ -22,22 +22,23 @@ public class Contract extends Employee{
 	{
 		return this.gradeOfSalary;
 	}
+	@Override
 	public void input()
 	{
 		Scanner in = new Scanner(System.in);
-		super.input();
+		//super.input();
 		System.out.println("Enter the grade of salary : ");
 		this.setGradeOfSalary(in.nextDouble());
 	}
 	public void output()
 	{
-		super.output();
+		//super.output();
 		System.out.println("The Grade Of Salary : "+this.getGradeOfSalary());
-		this.computeSalary();
+		System.out.println("Salary : "+this.computeSalary());
 	}
-	public void computeSalary()
+	public double computeSalary()
 	{
-		System.out.println("The sum of salary : "+(this.getAllowance()+this.getGradeOfSalary()));
+		return this.getAllowance()+this.getGradeOfSalary();
 	}
 	public static void main(String[] args) {
 		Contract a1 = new Contract();

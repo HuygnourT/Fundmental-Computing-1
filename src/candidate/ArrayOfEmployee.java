@@ -11,9 +11,21 @@ public class ArrayOfEmployee {
 		for(int i = 0 ; i < n ; i++)
 		{
 			System.out.println("Enter the information of employee "+(i+1));
-			Employee tmp = new Employee();
-			tmp.input();
-			list[i] = tmp;
+			System.out.println("1-Regular/2-Contract");
+			int choose = in.nextInt();
+			
+			if(choose == 1)
+			{
+				Employee tmp = new Regular();
+				tmp.input();
+				list[i] = tmp;
+			}
+			else if (choose == 2)
+			{
+				Employee tmp = new Contract();
+				tmp.input();
+				list[i] = tmp;
+			}
 		}
 	}
 	public void output()
@@ -28,7 +40,7 @@ public class ArrayOfEmployee {
 	public static void main(String[] args) {
 		ArrayOfEmployee a = new ArrayOfEmployee();
 		a.input();
-		a.output()
+		a.output();
 	}
 
 }

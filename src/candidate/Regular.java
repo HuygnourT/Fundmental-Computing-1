@@ -25,7 +25,7 @@ public class Regular extends Employee {
 	}
 	public void setRate()
 	{
-		this.rate = (this.getYearOfExperience() < 25 ) ? ( this.getYearOfExperience() / 3 * 0.33 + 2.33 ): ( 8*0.33 + 2.33 );
+		this.rate = (this.getYearOfExperience() < 25 ) ? ( this.getYearOfExperience() / 3 * 0.33 + 2.33 ): ( 8 * 0.33 + 2.33 );
 	}
 	public void setRate2()
 	{
@@ -50,27 +50,28 @@ public class Regular extends Employee {
 	{
 		return this.basicOfSalary;
 	}
+	@Override
 	public void input()
 	{
 		Scanner in = new Scanner(System.in);
-		super.input();
+		//super.input();
 		System.out.println("Enter years of experience : ");
 		this.setYearOhExperience(in.nextInt());
-		setRate2();
+		setRate();
 		System.out.println("Enter the basic of salary : ");
 		this.setBasicOfSalary(in.nextDouble());
 	}
 	public void output()
 	{
-		super.output();
+		//super.output();
 		System.out.println("Years of experience : "+this.getYearOfExperience());
 		System.out.println("The rate : "+this.getRate());
 		System.out.println("Basic of salary : "+this.getBasicOfSalary());
-		computeSalary();
+		System.out.println("Salary : "+this.computeSalary());
 	}
-	public void computeSalary()
+	public double computeSalary()
 	{
-		System.out.println("The sum of salary : "+(this.getAllowance()+this.getRate()*this.getBasicOfSalary()));
+		return this.getAllowance()+this.getRate()*this.getBasicOfSalary();
 	}
 	public static void main(String[] args) {
 		Regular a1 = new Regular();

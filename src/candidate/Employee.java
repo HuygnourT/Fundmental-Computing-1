@@ -70,6 +70,10 @@ public class Employee extends Person  {
 		System.out.println("Allowance : "+this.getAllowance());
 		super.output();
 	}
+	public double computeSalary()
+	{
+		return 0;
+	}
 	public static void main(String[] args) {
 		Employee a1 = new Employee();
 		a1.input();
