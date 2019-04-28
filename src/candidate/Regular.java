@@ -54,7 +54,7 @@ public class Regular extends Employee {
 	public void input()
 	{
 		Scanner in = new Scanner(System.in);
-		super.input();
+		//super.input();
 		System.out.println("Enter years of experience : ");
 		this.setYearOhExperience(in.nextInt());
 		setRate();
@@ -63,7 +63,7 @@ public class Regular extends Employee {
 	}
 	public void output()
 	{
-		super.output();
+		//super.output();
 		System.out.println("Years of experience : "+this.getYearOfExperience());
 		System.out.println("The rate : "+this.getRate());
 		System.out.println("Basic of salary : "+this.getBasicOfSalary());

@@ -26,13 +26,13 @@ public class Contract extends Employee{
 	public void input()
 	{
 		Scanner in = new Scanner(System.in);
-		super.input();
+		//super.input();
 		System.out.println("Enter the grade of salary : ");
 		this.setGradeOfSalary(in.nextDouble());
 	}
 	public void output()
 	{
-		super.output();
+		//super.output();
 		System.out.println("The Grade Of Salary : "+this.getGradeOfSalary());
 		System.out.println("Salary : "+this.computeSalary());
 	}

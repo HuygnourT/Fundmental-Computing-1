@@ -40,11 +40,20 @@ public class ArrayOfEmployee {
 			else c2++;
 		System.out.println("The number of regular employee is "+c1+"\nThe number of contract employee is "+c2);
 	}
+	public void minSalary()
+	{
+		double min = list[0].computeSalary();
+		for(int i = 1 ; i < n ; i++)
+			if(min > list[i].computeSalary())
+				min = list[i].computeSalary();
+		System.out.println("Min salary : "+min);
+	}
 	public static void main(String[] args) {
 		ArrayOfEmployee a = new ArrayOfEmployee();
 		a.input();
 		a.output();
 		a.count();
+		a.minSalary();
 	}
 
 }

@@ -28,7 +28,6 @@ public class LinerEquation
 				System.out.println("Unlimited roots");
 			else System.out.println("No root");
 		else System.out.printf(" x =  %.2f\n",(-c/b)); 
-		
 	}
 	public void input()
 	{
