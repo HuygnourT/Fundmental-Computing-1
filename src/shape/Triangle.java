@@ -2,9 +2,9 @@ package shape;
 
 import java.util.Scanner;
 
-public class Triangle extends Shape
+public class Triangle implements Shape
 {
-	private double a,b,c;
+	protected double a,b,c;
 	public Triangle()
 	{
 		

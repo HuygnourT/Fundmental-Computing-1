@@ -2,9 +2,9 @@ package shape;
 
 import java.util.*;
 
-public class Circle extends Shape
+public class Circle implements Shape
 {	
-	private double radius;
+	protected double radius;
 	public Circle()
 	{
 		setRadius(1);

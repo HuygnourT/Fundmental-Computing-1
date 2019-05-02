@@ -90,11 +90,9 @@ public class Date{
 	public static void main(String[] args) {
 		Date d1 = new Date();
 		d1.getFullDay();
-		d1.nextDay();
+		//d1.nextDay();
 		
-		Date d2 = new Date(29,2,2000);
-		d2.getFullDay();
-		d2.nextDay();
+		
 	}
 
 }

@@ -2,7 +2,7 @@ package candidate;
 
 import java.util.*;
 
-public class Employee extends Person  {
+public abstract class Employee extends Person  {
 	protected String id,position;
 	protected double allowance;
 	public Employee()
@@ -12,9 +12,9 @@ public class Employee extends Person  {
 		this.position = "";
 		this.phoneNumber = "";
 	}
-	public Employee(String id,String fullName ,String position, boolean gender,String phoneNumber,double allowance)
+	public Employee(String id,String fullName ,String position, boolean gender,String phoneNumber,double allowance,Address add,Date date)
 	{
-		super(fullName,phoneNumber,gender);
+		super(fullName,phoneNumber,gender,add,date);
 		setID(id);
 		setPosition(position);
 		setAllowance(allowance);
@@ -63,12 +63,10 @@ public class Employee extends Person  {
 		System.out.println("Position : "+this.getPosition());
 		System.out.println("Allowance : "+this.getAllowance());
 	}
-	public double computeSalary()
-	{
-		return 0;
-	}
+	public abstract double computeSalary();
 	public static void main(String[] args) {
-		Employee a1 = new Employee();
+		//Employee a1 = new Employee(); 
+		//lop truu tuong k duoc new chinh no , ma thong qua con cua no
 //		a1.input();
 //		a1.output();
 //		Employee a2 = new Employee("0003","Alice Elodie","My Bitch",false,"007766",900);

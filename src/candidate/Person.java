@@ -89,12 +89,14 @@ public class Person{
 
 		Person p2 = new Person("Truong Phuc Huy","0935031325",true,new Address("4","Hoang Dieu","Hai Chau","Da Nang"),new Date(2,12,2000));
 		p2.output();
-		Person p1 = new Person();
-		p1.input();
-		p1.output();
-		Person p3 = p1;
-		p3.output();
-		System.out.println(p3+"\n"+p1);
+		System.out.println(p2.getDate());
+		System.out.println(p2.getAddress());
+//		Person p1 = new Person();
+//		p1.input();
+//		p1.output();
+//		Person p3 = p1;
+//		p3.output();
+//		System.out.println(p3+"\n"+p1);
 		
 	}
 	

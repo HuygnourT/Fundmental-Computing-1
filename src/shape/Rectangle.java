@@ -2,9 +2,18 @@ package shape;
 
 import java.util.Scanner;
 
-public class Rectangle extends Shape
+public class Rectangle implements Shape
 {
-	private double length,width;
+	protected double length,width;
+	public Rectangle()
+	{
+		
+	}
+	public Rectangle(double width,double length)
+	{
+		this.width = width;
+		this.length = length;
+	}
 	public void setLength(double length)
 	{
 		if(length <=0) this.length = 0;

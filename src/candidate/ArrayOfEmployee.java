@@ -13,13 +13,11 @@ public class ArrayOfEmployee {
 			System.out.println("Enter the information of employee "+(i+1));
 			System.out.println("1-Regular/2-Contract");
 			int choose = in.nextInt();
-			Employee tmp = new Employee();
 			if(choose == 1)
-				tmp = new Regular();
+				list[i] = new Regular();
 			else if (choose == 2)
-				tmp = new Contract();
-			tmp.input();
-			list[i] = tmp;
+				list[i] = new Contract();
+			list[i].input();
 		}
 	}
 	public void output()

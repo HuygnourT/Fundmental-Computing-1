@@ -1,20 +1,15 @@
 package shape;
 
-public class Shape {
-	public double area() {
-		return 0;
-	}
+public interface  Shape {
+	//Enable declare attribute with private,protected,default,public,static,final
+	public double area();
 
-	public double perimeter() {
-		return 0;
-	}
+	public double perimeter();
 
-	public void input() {
+	public void input();
 
-	}
-
-	public void output() {
-
-	}
+	public void output();
 
 }
+//100% called a interface
+//0-99% abstract class

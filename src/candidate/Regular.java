@@ -8,9 +8,9 @@ public class Regular extends Employee {
 		super();
 	}
 	public Regular(String id,String fullName ,String position, boolean gender,
-			String phoneNumber,double allowance,int yearOfExperience, double basicOfSalary)
+			String phoneNumber,double allowance,int yearOfExperience, double basicOfSalary,Address add,Date date)
 	{
-		super(id,fullName,position,gender,phoneNumber,allowance);
+		super(id,fullName,position,gender,phoneNumber,allowance,add,date);
 		this.setYearOhExperience(yearOfExperience);
 		this.setBasicOfSalary(basicOfSalary);
 		this.setRate();

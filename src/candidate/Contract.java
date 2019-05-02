@@ -9,9 +9,9 @@ public class Contract extends Employee{
 		super();
 	}
 	public Contract(String id,String fullName ,String position, 
-			boolean gender,String phoneNumber,double allowance,double gradeOfSalary)
+			boolean gender,String phoneNumber,double allowance,double gradeOfSalary,Address add,Date date)
 	{
-		super(id,fullName,position,gender,phoneNumber,allowance);
+		super(id,fullName,position,gender,phoneNumber,allowance,add,date);
 		this.setGradeOfSalary(gradeOfSalary);
 	}
 	public void setGradeOfSalary(double gradeOfSalary)
