@@ -1,0 +1,4 @@
+Triangle 3 4 7
+Circle 20
+Rectangle 5 7
+Cylinder 7 8

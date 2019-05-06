@@ -46,6 +46,10 @@ public class ArrayOfEmployee {
 				min = list[i].computeSalary();
 		System.out.println("Min salary : "+min);
 	}
+	public void sort()
+	{
+		
+	}
 	public static void main(String[] args) {
 		ArrayOfEmployee a = new ArrayOfEmployee();
 		a.input();

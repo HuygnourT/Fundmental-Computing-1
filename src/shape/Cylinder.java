@@ -24,9 +24,10 @@ public class Cylinder extends Circle {
 	{
 		return this.perimeter()*this.getHeight();
 	}
-	public double fullArea()
+	@Override
+	public double area()
 	{
-		return this.area() * 2 + this.surroundingArea();
+		return super.area() * 2 + this.surroundingArea();
 	}
 	@Override
 	public void input()
@@ -39,7 +40,7 @@ public class Cylinder extends Circle {
 	public void output()
 	{
 		System.out.println("Surrounding area : "+this.surroundingArea());
-		System.out.println("Full area : "+this.fullArea());
+		System.out.println("Full area : "+this.area());
 	}
 	
 }

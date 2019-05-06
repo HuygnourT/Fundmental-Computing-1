@@ -1,0 +1,14 @@
+triangle 3 4 7
+circle 20
+rectangle 5 7
+cylinder 7 8
+square 10
+square 20
+
+
+The area of the geometry 1 is 879.645943005142
+The area of the geometry 2 is 176.71458676442586
+The area of the geometry 3 is 78.53981633974483
+The area of the geometry 4 is 60.839999999999996
+The area of the geometry 5 is 52.26
+The area of the geometry 6 is 26.832815729997478

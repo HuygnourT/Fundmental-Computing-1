@@ -1,16 +1,16 @@
 package shape1;
 
-public abstract class Shape {
+public interface Shape {
 	//duoc khai bao field
 	//declare fields : public , static , final by default
 	//
-	public abstract double area();
+	public double area();
 
-	public abstract double perimeter();
+	public double perimeter();
 
-	public abstract void input();
+	public void input();
 
-	public abstract void output();
+	public void output();
 
 }
 //100% called a interface
