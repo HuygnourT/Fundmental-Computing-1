@@ -50,7 +50,24 @@ public class SquareEquation extends LinerEquation
 				
 		}
 	}
-	
+	@Override
+	public String solve2()
+	{
+		if(a==0)
+			return super.solve2();
+		else 
+		{	
+			double delta = Math.pow(b, 2) - 4*a*c;
+			if(delta  == 0 )
+				return "x = "+(-b)/2/a;
+			else if(delta > 0) 
+			{
+				return "x1 = "+(-b-Math.sqrt(delta))/2/a +
+				"\nx2 = "+(-b+Math.sqrt(delta))/2/a;
+			} else return "No root";		
+				
+		}
+	}
 	@Override
 	public void f(int a,int b)
 	{

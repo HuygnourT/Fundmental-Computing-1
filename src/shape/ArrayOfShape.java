@@ -41,7 +41,6 @@ public class ArrayOfShape {
 				list[n] = s;
 				n++;
 			}
-			
 		}
 	}
 	public void sortArea()
@@ -78,9 +77,9 @@ public class ArrayOfShape {
 			{
 				p.append("The area of circle : "+list[i].area()+"\n");
 			}
-			else if(list[i] instanceof Rectangle)
+			else if(list[i] instanceof Square)
 			{
-				p.append("The area of rectangle : "+list[i].area()+"\n");
+				p.append("The area of Square : "+list[i].area()+"\n");
 			}
 			else if(list[i] instanceof Rectangle)
 			{
