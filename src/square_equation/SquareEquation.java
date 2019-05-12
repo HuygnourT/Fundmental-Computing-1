@@ -62,8 +62,9 @@ public class SquareEquation extends LinerEquation
 				return "x = "+(-b)/2/a;
 			else if(delta > 0) 
 			{
-				return "x1 = "+(-b-Math.sqrt(delta))/2/a +
-				"\nx2 = "+(-b+Math.sqrt(delta))/2/a;
+				String as = "x1 = "+(-b-Math.sqrt(delta))/2/a +
+				" \nx2 = "+(-b+Math.sqrt(delta))/2/a;
+				return as;
 			} else return "No root";		
 				
 		}

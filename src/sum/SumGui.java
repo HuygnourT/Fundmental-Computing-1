@@ -37,7 +37,7 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 		txtA = new JTextField(10);
 		txtB = new JTextField(10);
 		txtResult = new JTextField(10);
-		
+		txtResult.setEnabled(false);
 		btnSum = new JButton("Sum");
 		btnReset = new JButton("Reset");
 		btnExit = new JButton("Exit");
@@ -66,6 +66,9 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 		btnReset.addActionListener(this);
 		btnExit.addActionListener(this);
 		
+		txtA.addKeyListener(this);
+		txtB.addKeyListener(this);
+		btnSum.addKeyListener(this);
 		super.validate();
 	}
 	@Override
@@ -74,18 +77,23 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 		{
 			int a = Integer.parseInt(txtA.getText());
 			int b = Integer.parseInt(txtB.getText());
+			txtResult.setEnabled(true);
 			txtResult.setText(""+(a+b));
 		}else if(e.getSource() == btnReset)
 		{
+			txtA.requestFocus();;
 			txtA.setText("");
 			txtB.setText("");
 			txtResult.setText("");
+			txtResult.setEnabled(false);
+			
 		}else if(e.getSource() == btnExit)
 			System.exit(0);
 	}
 	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
+	public void keyReleased(KeyEvent e) {//tha phim ra
+		
+			
 		
 	}
 	@Override
@@ -96,6 +104,26 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
+		if(e.getSource() == txtA)
+			if(e.getKeyCode() == KeyEvent.VK_ENTER || e.getKeyCode() == KeyEvent.VK_DOWN)
+			{
+				txtB.requestFocus();
+			}
+		if(e.getSource() == txtB)
+			if(e.getKeyCode() == KeyEvent.VK_ENTER || e.getKeyCode() == KeyEvent.VK_DOWN )
+			{
+				btnSum.requestFocus();
+			}
+			else if(e.getKeyCode() == KeyEvent.VK_UP)
+				txtA.requestFocus();
+		if(e.getSource() == btnSum)
+			if(e.getKeyCode() == KeyEvent.VK_ENTER)
+			{
+				int a = Integer.parseInt(txtA.getText());
+				int b = Integer.parseInt(txtB.getText());
+				txtResult.setEnabled(true);
+				txtResult.setText(""+(a+b));
+			}
 		
 	}
 	public static void main(String[] args) {
