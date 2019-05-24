@@ -1,10 +1,7 @@
 package fraction;
 
 import java.util.*;
-
 public class Fraction {
-	// Khong khai bao scanner o day vi scanner khong phai thuoc tinh chung cua tat
-	// ca cac thuoc tinh cua class
 	private Integer numerator, denominator;
 
 	public Fraction() {
@@ -27,15 +24,6 @@ public class Fraction {
 		else
 			this.denominator = d;
 	}
-
-	public Integer getNumerator() {
-		return numerator;
-	}
-
-	public Integer getDenominator() {
-		return this.denominator;
-	}
-
 	public void input() {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter numerator : ");
@@ -49,19 +37,27 @@ public class Fraction {
 		}
 		this.setDenominator(d);
 	}
+	public String toString() {
+		return this.numerator + "/" + this.denominator;}
+
+	public double divide() {
+		return 1.0 * this.getNumerator() / this.getDenominator();
+	}
+	public Integer getNumerator() {
+		return numerator;
+	}
+
+	public Integer getDenominator() {
+		return this.denominator;
+	}
+
+	
 
 	public void output() {
 		System.out.print(this.numerator + "/" + this.denominator + "    ");
 	}
 
-	public String toString() {
-		String output = this.numerator + "/" + this.denominator;
-		return output;
-	}
-
-	public double divide() {
-		return 1.0 * this.getNumerator() / this.getDenominator();
-	}
+	
 
 	public Fraction plus(Fraction f2) {
 		// System.out.print(this.toString()+" + "+f2.toString()+" = ");

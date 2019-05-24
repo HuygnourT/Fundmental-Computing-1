@@ -20,7 +20,7 @@ public class SquareEquationGui extends JFrame implements ActionListener,ItemList
 		//1.Initialization frame
 		super("Solve square equation");
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		super.setVisible(true);
+//		super.setVisible(true);
 		super.setSize(new Dimension(500,700));
 		super.setLayout(null);
 		
@@ -98,6 +98,8 @@ public class SquareEquationGui extends JFrame implements ActionListener,ItemList
 		txtB.addKeyListener(this);
 		txtC.addKeyListener(this);
 		btnSolve.addKeyListener(this);
+		
+		super.setVisible(true);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

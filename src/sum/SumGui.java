@@ -19,12 +19,13 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 		super.setSize(new Dimension(300,200));
 		super.setLocationRelativeTo(null);
 		super.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		super.setVisible(true);
+
 		super.setLayout(new GridLayout(4,1));
 		
 		//2.Tao cac panels chua component
 		pA = new JPanel(new FlowLayout());
 		pB = new JPanel(new FlowLayout());
+		
 		pResult = new JPanel(new FlowLayout());
 		pBtn = new JPanel(new FlowLayout());
 		
@@ -39,8 +40,11 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 		txtResult = new JTextField(10);
 		txtResult.setEnabled(false);
 		btnSum = new JButton("Sum");
+		btnSum.setForeground(Color.BLUE);
 		btnReset = new JButton("Reset");
+		btnReset.setForeground(Color.RED);
 		btnExit = new JButton("Exit");
+		btnExit.setForeground(Color.GREEN);
 		
 		//3.Them cac components vao JFrame
 		pA.add(lbA);
@@ -69,7 +73,7 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 		txtA.addKeyListener(this);
 		txtB.addKeyListener(this);
 		btnSum.addKeyListener(this);
-		super.validate();
+		super.setVisible(true);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -92,18 +96,12 @@ public class SumGui extends JFrame implements ActionListener,KeyListener{
 	}
 	@Override
 	public void keyReleased(KeyEvent e) {//tha phim ra
-		
-			
-		
 	}
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
 		if(e.getSource() == txtA)
 			if(e.getKeyCode() == KeyEvent.VK_ENTER || e.getKeyCode() == KeyEvent.VK_DOWN)
 			{

@@ -5,21 +5,24 @@ public class ReadFile {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 			File file = new File(
-"D:\\LearnJava\\StudyingAtUniversity\\16_Homework01_TruongPhucHuy\\src\\file\\hours.txt");
-			Scanner sc = new Scanner(file);
-			while(sc.hasNext())
+"src/file/huy.txt");
+			Scanner sc = new Scanner(new File("src/file/huy"));
+			Person[] tmp = new Person[3];
+			int i = 0;
+			while(sc.hasNextLine())
 			{
-				int id = sc.nextInt();
-				String name = sc.next();
-				int days = 0;
-				double totalHours = 0;
-				while(sc.hasNextDouble())
-				{
-					days++;
-					totalHours = totalHours + sc.nextDouble();
-				}
-				System.out.println(name + " (ID#"+id+") worked "+totalHours+" hours ("
-						+(totalHours/days)+" hours/day)");
+				tmp[i] = new Person();
+				sc.nextLine();
+				tmp[i].setName(sc.nextLine());
+				tmp[i].setGender(sc.nextLine());
+				//Sring tmp2 = sc.nextLine();
+				//System.out.println(sc.nextLine());
+				//String tmp3 = sc.nextLine();
+				//System.out.println(sc.nextLine());
+				i++;
 			}
+			for(int j = 0 ; j < i ; j++)
+				System.out.println(tmp[j].getName()+" "+tmp[j].getGender());
+			//System.out.println(tmp[0].getName()+" "+tmp[0].getGender());
 	}
 }

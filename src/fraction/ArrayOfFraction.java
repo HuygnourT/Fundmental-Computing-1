@@ -1,5 +1,7 @@
 package fraction;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class ArrayOfFraction {
 	private int n;
@@ -141,21 +143,57 @@ public class ArrayOfFraction {
 				System.out.print(a[i].toString()+" ");
 		System.out.println();
 	}
-	public static void main(String[] args) {
-		ArrayOfFraction arr = new ArrayOfFraction();
-		arr.input();
-		arr.output();
-		arr.sumMax1();
-		arr.sumMax2();
-		System.out.println("The fraction 5/3 is in the array of fraction ? "+arr.search(new Fraction(5,3)));
-		arr.remove(3);
-		arr.output();
-		arr.insert(new Fraction(5,3), 3);
-		arr.output();
-		arr.bubbleSort();
-		System.out.println("The sum of array of integer is "+arr.sumAll().minimalistFraction());
-		arr.removeNumeratorEven();
-		arr.denominatorOdd();
+	public void readFileToAray() throws FileNotFoundException
+	{
+		Scanner in = new Scanner(new File("src/fraction/Data.txt"));
+		while(!in.hasNextInt())
+			in.next();
+		n = in.nextInt();
+		for(int i = 0 ; i < n ; i++)
+		{
+			String tmp = in.next();
+			String[] nd = tmp.split("/");
+			Fraction t = new Fraction(Integer.parseInt(nd[0]),Integer.parseInt(nd[1]));
+			a[i] = t;	
+		}
+	}
+		public void display()
+		{
+			System.out.println("Fractions are read from file Data.txt");
+			for(int i = 0 ; i < n ; i++)
+			{
+				System.out.print(a[i].toString()+"  ");
+			}
+			System.out.println();
+		}
+		public void maxFraction()
+		{
+			Fraction max = a[0];
+			for(int i = 1 ; i < n ; i++)
+				if(a[i].divide() > max.divide())
+					max = a[i];
+			System.out.println("Max fration is: \n"+max.toString());
+		}
+	public static void main(String[] args) throws FileNotFoundException{
+		ArrayOfFraction list = new ArrayOfFraction();
+		list.readFileToAray();
+		list.display();
+		list.maxFraction();
+		
+//		ArrayOfFraction arr = new ArrayOfFraction();
+//		arr.input();
+//		arr.output();
+//		arr.sumMax1();
+//		arr.sumMax2();
+//		System.out.println("The fraction 5/3 is in the array of fraction ? "+arr.search(new Fraction(5,3)));
+//		arr.remove(3);
+//		arr.output();
+//		arr.insert(new Fraction(5,3), 3);
+//		arr.output();
+//		arr.bubbleSort();
+//		System.out.println("The sum of array of integer is "+arr.sumAll().minimalistFraction());
+//		arr.removeNumeratorEven();
+//		arr.denominatorOdd();
 		
 	}
 

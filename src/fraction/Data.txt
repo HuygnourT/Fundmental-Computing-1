@@ -1,0 +1,2 @@
+Numbers of Fraction is : 6
+1/2 	3/7		9/5 	2/4 	6/3		5/6
